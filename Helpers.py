@@ -1,4 +1,5 @@
 import pygame, sys
+import random
 from random import randint
 from pygame.locals import *
 from Constants import *
@@ -24,6 +25,9 @@ from Constants import *
 # Q 1.2: In Java, what is a method?
 # Q 1.3: How does a Python function look different than a Java method?
 
+color = random.randint(0,255)
+colorone = random.randint(0,255)
+colortwo = random.randint(0,255)
 
 walls = []
 
@@ -90,10 +94,10 @@ def draw(oldPiece, head, body, appleRect, hasEaten, screen):
 
 
     # Draw the head.
-    pygame.draw.rect(screen, (0, 255, 0), head)
+    pygame.draw.rect(screen, (color, colorone, colortwo), head)
     # Draw the body.
     for block in body:
-        pygame.draw.rect(screen, (0, 155, 0), block)
+        pygame.draw.rect(screen, (color, colorone, colortwo), block)
 
     # If we have not eaten, we need to clear the old rectangle.
     if (not hasEaten):
