@@ -44,16 +44,16 @@ while True:
         # Why do we check direction != UP, direction != DOWN, etc. ?
         elif keypress.type == KEYDOWN:
             # Check for the up arrow key
-            if keypress.key == K_UP and direction != UP:
+            if keypress.key == K_UP and direction != DOWN:
                 direction = UP
             # Check for the down arrow key
-            elif keypress.key == K_DOWN and direction != DOWN:
+            elif keypress.key == K_DOWN and direction != UP:
                 direction = DOWN
             # Check for the left arrow key
-            elif keypress.key == K_LEFT and direction != LEFT:
+            elif keypress.key == K_LEFT and direction != RIGHT:
                 direction = LEFT
             # Check for the right arrow key
-            elif keypress.key == K_RIGHT and direction != RIGHT:
+            elif keypress.key == K_RIGHT and direction != LEFT:
                 direction = RIGHT
 
     # Copy the head for later use.
