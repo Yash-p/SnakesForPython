@@ -78,6 +78,8 @@ while True:
     # Checks if the head collides with the wall.
     if(hasHitWall):
         quitGame()
+    if(hasHitBody):
+        quitGame()
 
     # We need to check if the head has collided with the body!
     # How can we do this?
