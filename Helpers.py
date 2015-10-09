@@ -28,6 +28,9 @@ from Constants import *
 color = random.randint(0,255)
 colorone = random.randint(0,255)
 colortwo = random.randint(0,255)
+colorthree = random.randint(0,255)
+colorfour = random.randint(0,255)
+colorfive = random.randint(0,255)
 
 walls = []
 
@@ -97,7 +100,7 @@ def draw(oldPiece, head, body, appleRect, hasEaten, screen):
     pygame.draw.rect(screen, (color, colorone, colortwo), head)
     # Draw the body.
     for block in body:
-        pygame.draw.rect(screen, (color, colorone, colortwo), block)
+        pygame.draw.rect(screen, (colorthree, colorfour, colorfive), block)
 
     # If we have not eaten, we need to clear the old rectangle.
     if (not hasEaten):
